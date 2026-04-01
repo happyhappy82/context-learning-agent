@@ -2,8 +2,8 @@
 
 > 정의를 외우는 건 시험용. 맥락으로 배우는 건 실전용.
 
-새로운 개념, 분야, 용어를 입력하면
-**맥락 속에서 자연스럽게 이해할 수 있는 레퍼런스 예시**를 대량으로 만들어주는 에이전트입니다.
+새로운 개념, 분야, 역할, 프로세스를 입력하면
+**그 세계의 장면을 보여줘서 감을 잡게 해주는** 에이전트입니다.
 
 ## 왜 만들었는가
 
@@ -14,33 +14,49 @@
 엄마가 사과를 보며 "Where's the apple?" 하는 걸 보고,
 **맥락 속에서** apple이 뭔지 알게 됩니다.
 
-이 에이전트는 어떤 개념이든 그렇게 배울 수 있게 도와줍니다.
+사업도, 업무도, 새로운 분야도 똑같습니다.
+이 에이전트는 어떤 주제든 **장면으로** 배울 수 있게 도와줍니다.
 
-## 사용법
+## 설치 — 글로벌 스킬 (추천)
 
-### Claude Code (추천)
-
-이 레포를 클론하면 바로 씁니다.
+어디서든 `/aijeong_context`를 쓰려면 글로벌 커맨드로 설치하세요.
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/context-learning-agent.git
+# 1. 글로벌 commands 폴더 생성 (없으면)
+mkdir -p ~/.claude/commands
+
+# 2. 파일 하나만 복사
+curl -o ~/.claude/commands/aijeong_context.md \
+  https://raw.githubusercontent.com/happyhappy82/context-learning-agent/main/.claude/commands/aijeong_context.md
+```
+
+끝. 이제 아무 프로젝트에서나:
+
+```
+/aijeong_context SaaS 사업
+/aijeong_context 스타트업 대표
+/aijeong_context 투자 유치 과정
+/aijeong_context 유닛 이코노믹스
+```
+
+## 입력 유형
+
+| 입력 | 예시 | 보여주는 것 |
+|------|------|-----------|
+| **단어/개념** | "유닛 이코노믹스" | 이 단어가 실제로 쓰이는 장면 20개 |
+| **분야/도메인** | "SaaS 사업" | 이 바닥이 어떻게 돌아가는지 |
+| **역할/직무** | "HR 담당자" | 이 사람의 하루, 의사결정, 압박 |
+| **프로세스** | "투자 유치 과정" | 처음~끝 단계별 장면 + 망하는 지점 |
+
+전부 설명이 아니라 **장면**으로 나옵니다.
+
+## 다른 방법으로 쓰기
+
+### 프로젝트 레벨 설치
+```bash
+git clone https://github.com/happyhappy82/context-learning-agent.git
 cd context-learning-agent
 claude
-```
-
-Claude Code 안에서:
-
-```
-/aijeong_context Resilience
-/aijeong_context 유닛 이코노믹스
-/aijeong_context 퍼포먼스 마케팅
-/aijeong_context OKR
-```
-
-이미 다른 프로젝트에서 쓰고 싶으면 파일 하나만 복사:
-
-```bash
-cp .claude/commands/aijeong_context.md 내프로젝트/.claude/commands/
 ```
 
 ### ChatGPT / Claude 웹
@@ -48,25 +64,6 @@ cp .claude/commands/aijeong_context.md 내프로젝트/.claude/commands/
 
 ### 그냥 복붙
 `system-prompt.md` 내용을 대화 맨 처음에 붙여넣고 바로 사용.
-
-## 사용 예시
-
-```
-/aijeong_context 유닛 이코노믹스
-```
-
-**출력:**
-- 한 줄 정의
-- 맥락 레퍼런스 20개+ (일상/비즈니스/실패/성공 상황별)
-- 헷갈리는 개념 비교
-- 셀프 테스트
-
-## 이런 분한테 유용합니다
-
-- 새 분야에 진입하는 사람
-- 용어는 알겠는데 실전에서 못 쓰는 사람
-- "그래서 그게 뭔데?"를 자주 듣는 사람
-- 교과서 정의 말고 진짜 감을 잡고 싶은 사람
 
 ---
 
