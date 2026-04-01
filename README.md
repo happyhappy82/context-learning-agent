@@ -18,24 +18,42 @@
 
 ## 사용법
 
-### ChatGPT (Custom GPT)
-1. ChatGPT → GPT 만들기
-2. `system-prompt.md` 내용을 Instructions에 붙여넣기
-3. 저장 후 사용
+### Claude Code (추천)
 
-### Claude (프로젝트)
-1. Claude → 프로젝트 생성
-2. `system-prompt.md` 내용을 프로젝트 지침에 붙여넣기
-3. 저장 후 사용
+이 레포를 클론하면 바로 씁니다.
+
+```bash
+git clone https://github.com/YOUR_USERNAME/context-learning-agent.git
+cd context-learning-agent
+claude
+```
+
+Claude Code 안에서:
+
+```
+/context-learn Resilience
+/context-learn 유닛 이코노믹스
+/context-learn 퍼포먼스 마케팅
+/context-learn OKR
+```
+
+이미 다른 프로젝트에서 쓰고 싶으면 파일 하나만 복사:
+
+```bash
+cp .claude/commands/context-learn.md 내프로젝트/.claude/commands/
+```
+
+### ChatGPT / Claude 웹
+`system-prompt.md` 내용을 Custom GPT Instructions 또는 Claude 프로젝트 지침에 붙여넣기.
 
 ### 그냥 복붙
-1. `system-prompt.md` 내용을 대화 맨 처음에 붙여넣기
-2. 바로 사용
+`system-prompt.md` 내용을 대화 맨 처음에 붙여넣고 바로 사용.
 
 ## 사용 예시
 
-**입력:**
-> "유닛 이코노믹스"
+```
+/context-learn 유닛 이코노믹스
+```
 
 **출력:**
 - 한 줄 정의
