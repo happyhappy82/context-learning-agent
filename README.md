@@ -31,16 +31,16 @@ claude
 Claude Code 안에서:
 
 ```
-/context-learn Resilience
-/context-learn 유닛 이코노믹스
-/context-learn 퍼포먼스 마케팅
-/context-learn OKR
+/aijeong_context Resilience
+/aijeong_context 유닛 이코노믹스
+/aijeong_context 퍼포먼스 마케팅
+/aijeong_context OKR
 ```
 
 이미 다른 프로젝트에서 쓰고 싶으면 파일 하나만 복사:
 
 ```bash
-cp .claude/commands/context-learn.md 내프로젝트/.claude/commands/
+cp .claude/commands/aijeong_context.md 내프로젝트/.claude/commands/
 ```
 
 ### ChatGPT / Claude 웹
@@ -52,7 +52,7 @@ cp .claude/commands/context-learn.md 내프로젝트/.claude/commands/
 ## 사용 예시
 
 ```
-/context-learn 유닛 이코노믹스
+/aijeong_context 유닛 이코노믹스
 ```
 
 **출력:**
